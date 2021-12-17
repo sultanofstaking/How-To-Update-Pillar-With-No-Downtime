@@ -5,9 +5,6 @@
 ### Summary
 Pillar updates are necessary, downtime isn't. In it's simplest form this guide walks you through a setup where you run two pillars. Pillar 1 connected to your syrius wallet that is producing momentums and pillar 2 that is not. You will perform all updates on pillar 2 first, confirm everything works, swap producer addresses in syrius to pillar 2, update pillar 1, then swap producer addresses back to where you started. Performing updates in this manner should reduce the risk that you miss any momentums because of downtime. This set-up will cost a bit more, but you will be thankful it is in place should an update not go as expected.
 
-### Prereqs
-1. X
-
 ### Steps
 
 **Step 1: Launch a clone pillar**
