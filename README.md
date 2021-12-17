@@ -9,9 +9,9 @@ Pillar updates are necessary, downtime isn't. In it's simplest form this guide w
 
 **Step 1: Launch a clone pillar**
 
-NOTE: Steps 1 and 2 are done completely in virtual machines. Do not touch syrius for this step!
+NOTE: Steps 1 and 2 are done completely in virtual machines. Do not touch syrius for these steps!
 
-The clone pillar (pillar 2) should have the same exact specs as your primary pillar (pillar 1). That means same service provider, same OS, same CPU, Memory, etc. It is fine to put the clone in another region (in fact encouraged) but everything else should be the exact same. The point is to be sure the update doesnt break your machine so the spects need to be the same otherwise you are introducing variables.
+The cloned pillar (pillar 2) should have the same exact specs as your primary pillar (pillar 1). That means same service provider, same OS, same CPU, Memory, etc. It is fine to put the clone in another region (in fact encouraged) but everything else should be the exact same. The point is to be sure the update doesnt break your machine so the spects need to be the same otherwise you are introducing variables.
 
 VPS is up and we are ready to launch the pillar right? No. Double check everythign is set up on the new VPS exactly as it is on pillar 1 VPS. SSH Config, UFW rules, any monitoring services etc. Follow the exact same steps to set up the new VPS as you did to set up pillar 1 VPS or again, you are introducing variables.
 
@@ -29,7 +29,7 @@ Select `3` for status and you should see your producer address in green.
 
 **Step 2: Test your updates on Pillar 2**
 
-If the team says you must update your pillar, run the update on pillar 2 first. The best way to do this is to have 2 terminals up. One should be where you will enter the commands and one should be running logs with the command above. Follow the teams or community guide for updating your pillar on pillar 2 and be sure that it continues to insert blocks as expected. At the time of writing many people will be "sentrifying" their pillars. This is a great example of where this setup can help since sentriy adjust firewalls. If you test sentrify on pillar 2, and for some reason the update fails or your pillar stops inserting blocks, you can now troubleshoot pillar 2 without worrying about missing momentums on pillar 1.
+If the team says you must update your pillar, run the update on pillar 2 first. The best way to do this is to have 2 terminals up. One should be where you will enter the commands and one should be running logs with the command above. Follow the team or community guide for updating pillar 2 and be sure that it continues to insert blocks as expected. At the time of writing many people will be "sentrifying" their pillars. This is a great example of where this setup can help since sentrify adjust firewall rules. If you test sentrify on pillar 2, and for some reason the update fails or your pillar stops inserting blocks, you can now troubleshoot pillar 2 without worrying about missing momentums on pillar 1.
 
 Hopefully the update went as expected. If not troubleshoot it until everything looks normal in pillar 2's logs.
 
